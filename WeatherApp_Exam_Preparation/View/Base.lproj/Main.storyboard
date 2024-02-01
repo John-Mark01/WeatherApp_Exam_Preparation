@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="WeatherApp_Exam_Preparation" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.90000000000000002" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="wallpaper" translatesAutoresizingMaskIntoConstraints="NO" id="7As-aR-iEC">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="x0Y-N6-oC2">
+                                <rect key="frame" x="25" y="99" width="356.66666666666669" height="47.333333333333343"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter a city name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Xhp-Bm-xDW">
+                                        <rect key="frame" x="0.0" y="0.0" width="300" height="47.333333333333336"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="300" id="JZ5-rd-9Vq"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="clip" role="primary" translatesAutoresizingMaskIntoConstraints="NO" id="PCm-cF-G4W">
+                                        <rect key="frame" x="304" y="0.0" width="52.666666666666686" height="47.333333333333336"/>
+                                        <color key="tintColor" red="0.95239514690000004" green="1" blue="0.99956114679999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <buttonConfiguration key="configuration" style="plain">
+                                            <imageReference key="image" image="magnifyingglass.circle" catalog="system" symbolScale="large" renderingMode="original"/>
+                                            <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" configurationType="font">
+                                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                            </preferredSymbolConfiguration>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="searchButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="YCj-if-vpf"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="22.2" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cus-Zp-zi5">
+                                <rect key="frame" x="230" y="204" width="88" height="102"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="102" id="tBk-o3-WV5"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Impact" family="Impact" pointSize="52"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Veliko Tarnovo" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RTZ-5e-Rd6">
+                                <rect key="frame" x="107" y="291" width="256" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="KFP-5m-Tck"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="36"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sun.max.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="Ojm-cO-anu">
+                                <rect key="frame" x="16" y="173" width="175" height="97"/>
+                                <color key="tintColor" red="0.52529417460000005" green="0.55155066289999999" blue="0.55130861310000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="175" id="3Dn-gc-np5"/>
+                                    <constraint firstAttribute="height" constant="97" id="Rb2-kJ-4NK"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="°C" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l0k-qJ-kSC">
+                                <rect key="frame" x="326" y="232" width="37" height="27"/>
+                                <fontDescription key="fontDescription" name="HiraginoSans-W6" family="Hiragino Sans" pointSize="27"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="tintColor" systemColor="systemGreenColor"/>
+                        <constraints>
+                            <constraint firstItem="l0k-qJ-kSC" firstAttribute="leading" secondItem="cus-Zp-zi5" secondAttribute="trailing" constant="8" id="28t-BL-KBi"/>
+                            <constraint firstItem="7As-aR-iEC" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="6b4-yv-N0f"/>
+                            <constraint firstItem="x0Y-N6-oC2" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="40" id="DnT-tf-LuG"/>
+                            <constraint firstItem="cus-Zp-zi5" firstAttribute="top" secondItem="x0Y-N6-oC2" secondAttribute="bottom" constant="57.670000000000002" id="Eg0-qv-6Pi"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="l0k-qJ-kSC" secondAttribute="trailing" constant="30" id="Hgt-lX-JnL"/>
+                            <constraint firstItem="cus-Zp-zi5" firstAttribute="leading" secondItem="Ojm-cO-anu" secondAttribute="trailing" constant="39" id="IYi-xW-rdu"/>
+                            <constraint firstAttribute="bottom" secondItem="7As-aR-iEC" secondAttribute="bottom" id="Ial-Wz-hVg"/>
+                            <constraint firstItem="RTZ-5e-Rd6" firstAttribute="top" secondItem="Ojm-cO-anu" secondAttribute="bottom" constant="21" id="IlE-rC-rzJ"/>
+                            <constraint firstItem="RTZ-5e-Rd6" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="107" id="WGf-o3-pAN"/>
+                            <constraint firstItem="7As-aR-iEC" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="aTE-md-g3x"/>
+                            <constraint firstItem="l0k-qJ-kSC" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="cus-Zp-zi5" secondAttribute="trailing" constant="8" symbolic="YES" id="cFs-eS-8h5"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="x0Y-N6-oC2" secondAttribute="trailing" constant="11.33" id="hpE-sz-hsN"/>
+                            <constraint firstAttribute="trailing" secondItem="cus-Zp-zi5" secondAttribute="trailing" constant="75" id="nq0-CT-jwh"/>
+                            <constraint firstItem="RTZ-5e-Rd6" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="291" id="pu4-7j-lJ2"/>
+                            <constraint firstItem="x0Y-N6-oC2" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="25" id="qZo-bg-KxB"/>
+                            <constraint firstItem="RTZ-5e-Rd6" firstAttribute="top" secondItem="l0k-qJ-kSC" secondAttribute="bottom" constant="32" id="r2O-Jg-f4j"/>
+                            <constraint firstItem="7As-aR-iEC" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="tbJ-XH-ygr"/>
+                            <constraint firstItem="RTZ-5e-Rd6" firstAttribute="trailing" secondItem="l0k-qJ-kSC" secondAttribute="trailing" id="wpg-yN-yU2"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="cityLabel" destination="RTZ-5e-Rd6" id="408-iT-407"/>
+                        <outlet property="cityTextField" destination="Xhp-Bm-xDW" id="SU0-XH-wzI"/>
+                        <outlet property="searchButton" destination="PCm-cF-G4W" id="PYF-VV-Y1d"/>
+                        <outlet property="tempretureLabel" destination="cus-Zp-zi5" id="xcs-yX-4AJ"/>
+                        <outlet property="weatherPicture" destination="Ojm-cO-anu" id="ygk-fj-cGZ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="130.53435114503816" y="-34.507042253521128"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="magnifyingglass.circle" catalog="system" width="128" height="123"/>
+        <image name="sun.max.fill" catalog="system" width="128" height="125"/>
+        <image name="wallpaper" width="736" height="1308"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
