@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import CoreLocation
 
 class ViewController: UIViewController {
     @IBOutlet weak var cityTextField: UITextField!
@@ -14,16 +15,90 @@ class ViewController: UIViewController {
     @IBOutlet weak var tempretureLabel: UILabel!
     @IBOutlet weak var cityLabel: UILabel!
     
+    
+    var networkManager = NetworkManager()
+    let locationManager = CLLocationManager()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
+        locationManager.delegate = self
+        
+        locationManager.requestWhenInUseAuthorization()
+        locationManager.requestLocation()
+        
+        networkManager.delegate = self
+        cityTextField.delegate = self
     }
 
-    var apiKey = "fca2cd5933142256e59d27086ecc9d29"
+  
+}
+//MARK: - TextFieldDelegates
+extension ViewController: UITextFieldDelegate {
     
     @IBAction func searchButtonPressed(_ sender: UIButton) {
         
+        cityTextField.endEditing(true)
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        
+        cityTextField.endEditing(true)
+        return true
+    }
+    
+    func textFieldShouldEndEditing(_ textField: UITextField) -> Bool {
+        if textField.text != "" {
+            return true
+        } else {
+            cityTextField.placeholder = "Type a city name..."
+            return false
+        }
+    }
+    
+   func textFieldDidEndEditing(_ textField: UITextField) {
+        
+        if let city = cityTextField.text {
+            networkManager.fetchWeather(cityName: city)
+        }
+        cityTextField.text = ""
+    }
+    
+}
+
+//MARK: - Network and API Manager
+extension ViewController: NetworkManagerDelegate {
+    
+    func didUpdateWeather(_ NetworkManager: NetworkManager, weather: WeatherModel) {
+        DispatchQueue.main.async {
+            self.tempretureLabel.text = weather.temperatureString
+            self.cityLabel.text = weather.cityName
+            self.weatherPicture.image = UIImage(systemName: weather.conditionName)
+        }
+    }
+    
+    func didFailWithError(error: Error) {
+        print("ERROR  IN VIEW CONTROLLER - \(error)")
+    }
+    
+}
+
+extension ViewController: CLLocationManagerDelegate {
+    
+    
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        if let location = locations.last {
+            locationManager.stopUpdatingLocation()
+            let lat = location.coordinate.latitude
+            let lon = location.coordinate.longitude
+            networkManager.fetchWeather(latitude: lat, longitude: lon)
+        }
         
     }
+    func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
+        print(error.localizedDescription)
+    }
 }
+    
+
 
