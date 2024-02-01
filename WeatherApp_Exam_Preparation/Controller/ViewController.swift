@@ -14,7 +14,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var weatherPicture: UIImageView!
     @IBOutlet weak var tempretureLabel: UILabel!
     @IBOutlet weak var cityLabel: UILabel!
-    
+    @IBOutlet weak var conditionLabel: UILabel!
     
     var networkManager = NetworkManager()
     let locationManager = CLLocationManager()
@@ -74,6 +74,8 @@ extension ViewController: NetworkManagerDelegate {
             self.tempretureLabel.text = weather.temperatureString
             self.cityLabel.text = weather.cityName
             self.weatherPicture.image = UIImage(systemName: weather.conditionName)
+            self.conditionLabel.text = weather.description.uppercased()
+            print(weather.description)
         }
     }
     
