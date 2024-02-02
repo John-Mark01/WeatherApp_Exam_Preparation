@@ -79,9 +79,9 @@
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" text="clear sky" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gbo-c4-V4E">
-                                <rect key="frame" x="0.0" y="249" width="145" height="82"/>
+                                <rect key="frame" x="0.0" y="255" width="145" height="76"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="82" id="2bM-5i-h1L"/>
+                                    <constraint firstAttribute="height" constant="76" id="2bM-5i-h1L"/>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="145" id="Wjw-UY-vf0"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="23"/>
@@ -100,7 +100,7 @@
                             <constraint firstItem="7As-aR-iEC" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="6b4-yv-N0f"/>
                             <constraint firstItem="x0Y-N6-oC2" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="40" id="DnT-tf-LuG"/>
                             <constraint firstItem="cus-Zp-zi5" firstAttribute="top" secondItem="x0Y-N6-oC2" secondAttribute="bottom" constant="17.666666666666657" id="Eg0-qv-6Pi"/>
-                            <constraint firstItem="Gbo-c4-V4E" firstAttribute="top" secondItem="x0Y-N6-oC2" secondAttribute="bottom" constant="102.66666666666666" id="HCA-5g-2VH"/>
+                            <constraint firstItem="Gbo-c4-V4E" firstAttribute="top" secondItem="x0Y-N6-oC2" secondAttribute="bottom" constant="108.66666666666666" id="HCA-5g-2VH"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="l0k-qJ-kSC" secondAttribute="trailing" constant="28" id="Hgt-lX-JnL"/>
                             <constraint firstItem="cus-Zp-zi5" firstAttribute="leading" secondItem="Ojm-cO-anu" secondAttribute="trailing" constant="42" id="IYi-xW-rdu"/>
                             <constraint firstAttribute="bottom" secondItem="7As-aR-iEC" secondAttribute="bottom" id="Ial-Wz-hVg"/>
