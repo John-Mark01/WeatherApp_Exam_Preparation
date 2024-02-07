@@ -29,6 +29,8 @@ class ViewController: UIViewController {
         
         networkManager.delegate = self
         cityTextField.delegate = self
+        let (captain, engineer, doctor) = ("mal", "jdfakla", "Simon")
+        print(engineer)
     }
 
   
